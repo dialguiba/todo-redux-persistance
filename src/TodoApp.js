@@ -48,7 +48,7 @@ export const TodoApp = () => {
                   <Row>
                     <Col>
                       <Col className="col-auto me-auto">{todo.name}</Col>
-                      <Col className="col-auto text-muted ">asda</Col>
+                      <Col className="col-auto text-muted ">{todo.description}</Col>
                     </Col>
                     <Col className="col-auto">
                       <Button type="button" className="btn-close" aria-label="Close" onClick={() => handleDeleteTodo(todo.id)}></Button>

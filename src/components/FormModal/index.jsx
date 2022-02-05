@@ -16,14 +16,15 @@ export const FormModal = (props) => {
   const [formTodoValues, handleTodoInputChange] = useForm({
     name: "",
     date: moment(new Date()).format("YYYY-MM-DD"),
+    description: "",
   });
 
-  const { name, date } = formTodoValues;
+  const { name, date, description } = formTodoValues;
 
   const handleCreateTodo = (e) => {
     e.preventDefault();
-    console.log(name, date);
-    dispatch(addTodo({ name, date, id: new Date().getTime() }));
+
+    dispatch(addTodo({ name, date, id: new Date().getTime(), description }));
     dispatch(todoSetActives(currentDate));
     props.onHide();
     Swal.fire({
@@ -43,6 +44,11 @@ export const FormModal = (props) => {
           <Form.Group className="mb-3" controlId="formBasicName">
             <Form.Label>Nombre de Tarea</Form.Label>
             <Form.Control type="text" placeholder="Ingresa nombre de la tarea" value={name} name="name" onChange={handleTodoInputChange} />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicName">
+            <Form.Label>Descripción de Tarea</Form.Label>
+            <Form.Control type="text" placeholder="Ingresa nombre de la tarea" value={description} name="description" onChange={handleTodoInputChange} />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicDate">
