@@ -13,9 +13,7 @@ ReactDOM.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <HashRouter>
-          <Routes>
-            <Route path="/" element={<TodoApp />} />
-          </Routes>
+          <TodoApp />
         </HashRouter>
       </PersistGate>
     </Provider>

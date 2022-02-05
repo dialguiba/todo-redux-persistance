@@ -2,7 +2,7 @@
   "name": "todo-react-redux",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dialguiba.github.io/todo-redux-persistance/",
+  "homepage": "https://dialguiba.github.io/todo-redux-persistance",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
