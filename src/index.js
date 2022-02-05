@@ -6,7 +6,7 @@ import { store, persistor } from "./store/store";
 import { Provider } from "react-redux";
 /*  */
 import { PersistGate } from "redux-persist/integration/react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
